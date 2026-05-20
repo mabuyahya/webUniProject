@@ -1,16 +1,29 @@
-# React + Vite
+# WebUni MERN Book Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple MERN stack application that supports registration, login, and user-specific book management.
 
-Currently, two official plugins are available:
+## Project structure
+- `src/`: React + Vite front-end
+- `backend/`: Express + MongoDB API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Local setup
+1. **Front-end**
+   - `npm install`
+   - `npm run dev`
+   - Optional: create `.env` with `VITE_API_URL=http://localhost:4000`
 
-## React Compiler
+2. **Back-end**
+   - `cd backend`
+   - `cp .env.example .env` and update values
+   - `npm install`
+   - `npm run dev`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## API routes
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `POST /api/auth/logout`
+- `GET /api/auth/me`
+- `GET /api/books`
+- `POST /api/books`
+- `PUT /api/books/:id`
+- `DELETE /api/books/:id`

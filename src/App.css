@@ -26,6 +26,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  align-items: center;
 }
 
 .header nav a {
@@ -38,6 +39,25 @@ body {
 
 .header nav a:hover {
   background-color: #34495e;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.link-button:hover {
+  background-color: #34495e;
+}
+
+.nav-user {
+  font-weight: bold;
 }
 
 .container {
@@ -134,6 +154,50 @@ body {
 }
 
 .form button:hover {
+  background-color: #34495e;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form button.secondary,
+.table-actions button.secondary {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+.form button.secondary:hover,
+.table-actions button.secondary:hover {
+  background-color: #aab2b7;
+}
+
+.status-text {
+  margin-bottom: 15px;
+}
+
+.error-text {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.table-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.table-actions button:hover {
   background-color: #34495e;
 }
 
